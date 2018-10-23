@@ -51,7 +51,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="YcR-AD-ftf" kind="show" id="ZST-2L-pcT"/>
+                                    <segue destination="YcR-AD-ftf" kind="show" identifier="ShowDetail" id="ZST-2L-pcT"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

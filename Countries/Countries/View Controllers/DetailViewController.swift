@@ -9,7 +9,10 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateViews()
+    }
     func updateViews(){
         guard isViewLoaded, let country = country else {return}
         
@@ -35,11 +38,7 @@ class DetailViewController: UIViewController {
     }
     
     //MARK: - Properties
-    var country: Country?{
-        didSet{
-            updateViews()
-        }
-    }
+    var country: Country?
     
     //IBOutlets
     @IBOutlet weak var imageView: UIImageView!
