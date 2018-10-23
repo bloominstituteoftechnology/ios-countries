@@ -13,6 +13,8 @@
 		399764E8217FB3FC00245DD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 399764E6217FB3FC00245DD0 /* LaunchScreen.storyboard */; };
 		399764F4217FC4E700245DD0 /* CountriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399764F3217FC4E700245DD0 /* CountriesTableViewController.swift */; };
 		399764F7217FC51900245DD0 /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399764F6217FC51900245DD0 /* CountryDetailViewController.swift */; };
+		399764F9217FC71100245DD0 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399764F8217FC71100245DD0 /* Country.swift */; };
+		399764FC217FCD3C00245DD0 /* CountryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399764FB217FCD3C00245DD0 /* CountryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		399764E9217FB3FC00245DD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		399764F3217FC4E700245DD0 /* CountriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesTableViewController.swift; sourceTree = "<group>"; };
 		399764F6217FC51900245DD0 /* CountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
+		399764F8217FC71100245DD0 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		399764FB217FCD3C00245DD0 /* CountryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				399764DD217FB3FB00245DD0 /* AppDelegate.swift */,
+				399764FA217FC71A00245DD0 /* Model */,
+				399764FD217FCD4100245DD0 /* Model Controller */,
 				399764F5217FC4ED00245DD0 /* View Controllers */,
 				399764E1217FB3FB00245DD0 /* Main.storyboard */,
 				399764E4217FB3FC00245DD0 /* Assets.xcassets */,
@@ -73,6 +79,22 @@
 				399764F6217FC51900245DD0 /* CountryDetailViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		399764FA217FC71A00245DD0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				399764F8217FC71100245DD0 /* Country.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		399764FD217FCD4100245DD0 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				399764FB217FCD3C00245DD0 /* CountryController.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +168,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				399764F9217FC71100245DD0 /* Country.swift in Sources */,
 				399764F7217FC51900245DD0 /* CountryDetailViewController.swift in Sources */,
+				399764FC217FCD3C00245DD0 /* CountryController.swift in Sources */,
 				399764F4217FC4E700245DD0 /* CountriesTableViewController.swift in Sources */,
 				399764DE217FB3FB00245DD0 /* AppDelegate.swift in Sources */,
 			);
