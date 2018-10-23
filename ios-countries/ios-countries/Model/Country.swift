@@ -19,13 +19,13 @@ struct Country: Codable {
 }
 
 struct Currency: Codable {
-    let code: String
-    let name: String
+    let code: String?
+    let name: String?
     let symbol: String?
 }
 
 struct Language: Codable {
-    let iso6391: String
+    let iso6391: String?
     let iso6392: String
     let name: String
     let nativeName: String
