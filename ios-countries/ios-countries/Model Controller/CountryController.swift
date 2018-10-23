@@ -34,6 +34,10 @@ class CountryController {
         }.resume()
     }
     
+    func countryURLtoFilename(flagURL: String) -> String {
+        return String(URL(fileURLWithPath: flagURL).deletingPathExtension().lastPathComponent)
+    }
+    
     let baseURL = URL(string: "https://restcountries.eu/rest/v2/name/")!
     var countries: [Country] = []
 }

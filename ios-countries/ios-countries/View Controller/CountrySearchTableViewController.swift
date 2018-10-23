@@ -29,8 +29,7 @@ class CountrySearchTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath)
         
         let country = countryController.countries[indexPath.row]
-        let countryFlag = country.flag
-        let imageName = String(URL(fileURLWithPath: countryFlag).deletingPathExtension().lastPathComponent)
+        let imageName = countryController.countryURLtoFilename(flagURL: country.flag)
         cell.textLabel?.text = country.name
         cell.imageView?.image = UIImage(imageLiteralResourceName: imageName)
         
@@ -45,6 +44,7 @@ class CountrySearchTableViewController: UITableViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let country = countryController.countries[indexPath.row]
                 detailViewController.country = country
+                detailViewController.countryController = countryController
             }
         }
     }

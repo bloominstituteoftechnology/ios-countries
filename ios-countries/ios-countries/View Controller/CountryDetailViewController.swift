@@ -10,13 +10,17 @@ import UIKit
 
 class CountryDetailViewController: UIViewController {
     
+    // MARK: - IBOutlets
+    @IBOutlet var flagImageView: UIImageView!
+    
     // MARK: - Properties
+    var countryController: CountryController?
     var country: Country? {
         didSet {
             updateViews()
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
@@ -26,7 +30,9 @@ class CountryDetailViewController: UIViewController {
     
     // MARK: - Private
     private func updateViews() {
-        guard let country = country, isViewLoaded else { return }
+        guard let country = country, isViewLoaded,
+            let countryFlag = countryController?.countryURLtoFilename(flagURL: country.flag) else { return }
         title = country.name
+        flagImageView.image = UIImage(imageLiteralResourceName: countryFlag)
     }
 }
