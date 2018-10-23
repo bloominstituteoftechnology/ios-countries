@@ -10,6 +10,7 @@ import UIKit
 
 class MasterViewController: UITableViewController, UISearchBarDelegate {
 
+    var countryController = CountryController()
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
     @IBOutlet weak var searchBar: UISearchBar!
@@ -17,6 +18,7 @@ class MasterViewController: UITableViewController, UISearchBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
         
         if let split = splitViewController {
             let controllers = split.viewControllers
@@ -29,8 +31,20 @@ class MasterViewController: UITableViewController, UISearchBarDelegate {
         super.viewWillAppear(animated)
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let countryName = searchBar.text {
+            countryController.fetchCountries(with: countryName) { (error) in
+                
+            }
+        }
+    }
+    
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        
+        if let countryName = searchBar.text {
+            countryController.fetchCountries(with: countryName) { (error) in
+                
+            }
+        }
     }
 
     // MARK: - Segues

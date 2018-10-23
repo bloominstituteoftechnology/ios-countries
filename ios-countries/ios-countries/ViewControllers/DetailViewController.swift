@@ -26,7 +26,9 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         navigationController?.title = country?.name
-        flagImageView?.image = country?.flag
+        if let flagSuffix = country?.flagSuffix, let image = UIImage(named: flagSuffix) {
+            flagImageView?.image = image
+        }
         nameLabel?.text = country?.name
         regionLabel?.text = country?.region
         capitalLabel?.text = country?.capital

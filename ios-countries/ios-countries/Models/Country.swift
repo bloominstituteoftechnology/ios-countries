@@ -9,14 +9,24 @@
 import Foundation
 import UIKit
 
-struct Country {
+struct Country: Decodable {
     
     let name: String
     let region: String
     let capital: String
     let population: Int
-    let currences: [String]
-    let languages: [String]
-    let flag: UIImage
+    //let currencies: [String]
+    //let languages: [String]
+    let flagSuffix: String
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case region
+        case capital
+        case population
+        //case currencies
+        //case languages
+        case flagSuffix = "alpha3Code"
+    }
     
 }
