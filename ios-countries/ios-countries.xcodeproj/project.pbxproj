@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		13263D62217FBEC300B555CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13263D61217FBEC300B555CE /* AppDelegate.swift */; };
-		13263D64217FBEC300B555CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13263D63217FBEC300B555CE /* ViewController.swift */; };
 		13263D67217FBEC300B555CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13263D65217FBEC300B555CE /* Main.storyboard */; };
 		13263D69217FBEC400B555CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13263D68217FBEC400B555CE /* Assets.xcassets */; };
 		13263D6C217FBEC400B555CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13263D6A217FBEC400B555CE /* LaunchScreen.storyboard */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		13263D5E217FBEC300B555CE /* ios-countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-countries.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13263D61217FBEC300B555CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		13263D63217FBEC300B555CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		13263D66217FBEC300B555CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13263D68217FBEC400B555CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13263D6B217FBEC400B555CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,9 +54,8 @@
 		13263D60217FBEC300B555CE /* ios-countries */ = {
 			isa = PBXGroup;
 			children = (
-				13263D74217FC41E00B555CE /* Model */,
 				13263D61217FBEC300B555CE /* AppDelegate.swift */,
-				13263D63217FBEC300B555CE /* ViewController.swift */,
+				13263D74217FC41E00B555CE /* Model */,
 				13263D73217FC3D500B555CE /* Resources */,
 			);
 			path = "ios-countries";
@@ -154,7 +151,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13263D64217FBEC300B555CE /* ViewController.swift in Sources */,
 				13263D76217FC43000B555CE /* Country.swift in Sources */,
 				13263D62217FBEC300B555CE /* AppDelegate.swift in Sources */,
 			);
