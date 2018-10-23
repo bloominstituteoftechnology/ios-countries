@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TEk-QK-S6h">
+    <device id="retina3_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Country Detail View Controller-->
+        <scene sceneID="Vkg-wQ-4cG">
+            <objects>
+                <viewController id="SGr-DE-nzC" customClass="CountryDetailViewController" customModule="ios_countries" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xAQ-ba-omw">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1VN-gd-3Cb">
+                                <rect key="frame" x="150" y="40" width="180" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1VN-gd-3Cb" secondAttribute="height" multiplier="2:1" id="1TC-eL-EIG"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1VN-gd-3Cb" firstAttribute="top" secondItem="R8P-gg-ful" secondAttribute="top" id="3jM-i2-x7e">
+                                <variation key="heightClass=compact-widthClass=compact" constant="8"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="50"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="1VN-gd-3Cb" firstAttribute="leading" secondItem="R8P-gg-ful" secondAttribute="leading" id="OYW-Ou-YSO">
+                                <variation key="heightClass=compact-widthClass=compact" constant="150"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="150"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                            </constraint>
+                            <constraint firstItem="1VN-gd-3Cb" firstAttribute="trailing" secondItem="R8P-gg-ful" secondAttribute="trailing" id="qdn-2F-v8t">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-150"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="-150"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="-100"/>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R8P-gg-ful"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="h6P-tW-qZZ"/>
+                    <connections>
+                        <outlet property="flagImageView" destination="1VN-gd-3Cb" id="m3e-W7-hoN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h49-uM-E4F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1104.375" y="260"/>
+        </scene>
+        <!--Country Search Table View Controller-->
+        <scene sceneID="vvr-d5-W0o">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="PF9-O2-dlf" customClass="CountrySearchTableViewController" customModule="ios_countries" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kgm-2M-QYz">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search for country" id="pGm-pr-UIT">
+                            <rect key="frame" x="0.0" y="0.0" width="596" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryCell" textLabel="aFy-JC-WCs" imageView="j8g-9j-aCj" rowHeight="50" style="IBUITableViewCellStyleDefault" id="tou-Us-79f">
+                                <rect key="frame" x="0.0" y="72" width="480" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tou-Us-79f" id="g8c-jz-wQK">
+                                    <rect key="frame" x="0.0" y="0.0" width="480" height="49.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="bottom" insetsLayoutMarginsFromSafeArea="NO" text="United States of America" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aFy-JC-WCs">
+                                            <rect key="frame" x="125" y="0.0" width="339" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="usa" id="j8g-9j-aCj">
+                                            <rect key="frame" x="16" y="0.0" width="94" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="l9G-iT-Eca" kind="showDetail" identifier="ShowDetailSegue" id="CH7-cx-0SL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PF9-O2-dlf" id="UM1-0x-558"/>
+                            <outlet property="delegate" destination="PF9-O2-dlf" id="FG7-mu-5QQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="C1Z-s5-qen"/>
+                    <connections>
+                        <outlet property="searchBar" destination="pGm-pr-UIT" id="bTI-GR-gWg"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z2d-na-9Kl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1107" y="-548"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qwH-jt-cnB">
+            <objects>
+                <navigationController id="ayf-m0-iGQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lm3-yb-dqr">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PF9-O2-dlf" kind="relationship" relationship="rootViewController" id="LGl-RY-cPb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xB5-q6-IZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="-548"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="wUd-sl-S3R">
+            <objects>
+                <splitViewController id="TEk-QK-S6h" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="ayf-m0-iGQ" kind="relationship" relationship="masterViewController" id="Bwl-I0-Z9c"/>
+                        <segue destination="l9G-iT-Eca" kind="relationship" relationship="detailViewController" id="OKT-VM-IjW"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mic-Bl-pWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-795" y="-215"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tPW-0c-xKf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l9G-iT-Eca" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Js-X4-nrb">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SGr-DE-nzC" kind="relationship" relationship="rootViewController" id="KPY-k4-Asq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rcu-Do-bKA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="260"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="usa" width="1235" height="650"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="CH7-cx-0SL"/>
+    </inferredMetricsTieBreakers>
+</document>
