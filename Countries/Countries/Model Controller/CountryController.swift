@@ -10,11 +10,9 @@ import UIKit
 
 class CountryController {
     
-    var countries: [Country] = []
-    
     static let baseURL = URL(string: "https://restcountries.eu/rest/v2/name")!
     
-    func fetchCountry(withName name: String, completion: @escaping (Country?, Error?) -> Void) {
+    func fetchCountry(withName name: String, completion: @escaping ([Country]?, Error?) -> Void) {
         let url = CountryController.baseURL.appendingPathComponent(name.capitalized)
         
         var request = URLRequest(url: url)
@@ -38,7 +36,9 @@ class CountryController {
             
             do {
                 let countries = try JSONDecoder().decode([Country].self, from: data)
-                self.countries = countries
+                DispatchQueue.main.async {
+                    completion(countries, nil)
+                }
             } catch {
                 NSLog("Unable to decode countries: \(error)")
                 DispatchQueue.main.async {

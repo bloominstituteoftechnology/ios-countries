@@ -10,6 +10,14 @@ import UIKit
 
 class CountryDetailViewController: UIViewController {
     
+    // MARK: - Properties
+    
+    var country: Country? {
+        didSet {
+            updateViews()
+        }
+    }
+    
     // MARK: - Outlets/Actions
     
     @IBOutlet weak var imageView: UIImageView!
@@ -22,6 +30,21 @@ class CountryDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        updateViews()
+    }
+    
+    // MARK: - Methods
+    
+    private func updateViews() {
+        guard let country = country, isViewLoaded else { return }
+        
+        navigationItem.title = country.name
+        regionLabel.text = "Region: \(country.region)"
+        capitalLabel.text = "Capital: \(country.capital)"
+        populationLabel.text = "Population: \(country.population)"
+        currenciesLabel.text = "Currencies: \(country.currencies.joined(separator: ", "))"
+        languagesLabel.text = "Languages: \(country.languages.joined(separator: ", "))"
+        
+        imageView.image = UIImage(named: "\(country.alpha3Code)")
     }
 }

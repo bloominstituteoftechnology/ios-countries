@@ -79,7 +79,10 @@
                     <navigationItem key="navigationItem" title="Title" id="MKm-2u-49L"/>
                     <connections>
                         <outlet property="capitalLabel" destination="nhe-cU-TAR" id="0ZS-bd-YmQ"/>
+                        <outlet property="currenciesLabel" destination="adM-1r-NrT" id="qYk-qd-sXp"/>
                         <outlet property="imageView" destination="TrI-B8-JtD" id="4Zc-gY-uj0"/>
+                        <outlet property="languagesLabel" destination="aJW-tl-cqr" id="0fj-cF-goU"/>
+                        <outlet property="populationLabel" destination="UHC-Ol-9Jg" id="CHo-lw-mTm"/>
                         <outlet property="regionLabel" destination="AZU-jt-WLM" id="o1l-3y-Scm"/>
                     </connections>
                 </viewController>
@@ -96,7 +99,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="r5O-Oi-Lzc">
-                            <rect key="frame" x="0.0" y="0.0" width="508" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
