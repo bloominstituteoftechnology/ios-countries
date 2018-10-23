@@ -35,3 +35,13 @@ class CountrySearchTableViewController: UITableViewController {
     */
 
 }
+
+// MARK: - UISearchBarDelegate
+extension CountrySearchTableViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchTerm = searchBar.text, !searchTerm.isEmpty else { return } // Make sure there is text in the search
+        
+        // perform search with search term
+        // reloadData after search is done
+    }
+}
