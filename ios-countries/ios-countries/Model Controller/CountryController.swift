@@ -25,14 +25,15 @@ class CountryController {
             }
             do {
                 let jsonDecoder = JSONDecoder()
-                let searchResults = try jsonDecoder.decode(Country.self, from: data)
+                let searchResults = try jsonDecoder.decode([Country].self, from: data)
+                self.countries = searchResults
             } catch {
                 NSLog("Error decoding \(data) into object, error: \(error)")
             }
             completion()
-        }
+        }.resume()
     }
     
     let baseURL = URL(string: "https://restcountries.eu/rest/v2/name/")!
-    let countries: [Country] = []
+    var countries: [Country] = []
 }

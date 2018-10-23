@@ -9,18 +9,31 @@
 import UIKit
 
 class CountrySearchTableViewController: UITableViewController {
+    // MARK: - Properties
+    let countryController = CountryController()
 
+    // MARK: - Outlets
+    @IBOutlet var searchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
     }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return countryController.countries.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath)
+        
+        let country = countryController.countries[indexPath.row]
+        let countryFlag = country.flag
+        let imageName = String(URL(fileURLWithPath: countryFlag).deletingPathExtension().lastPathComponent)
+        cell.textLabel?.text = country.name
+        cell.imageView?.image = UIImage(imageLiteralResourceName: imageName)
+        
         return cell
     }
 
@@ -42,6 +55,10 @@ extension CountrySearchTableViewController: UISearchBarDelegate {
         guard let searchTerm = searchBar.text, !searchTerm.isEmpty else { return } // Make sure there is text in the search
         
         // perform search with search term
-        // reloadData after search is done
+        countryController.performSearch(for: searchTerm) {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 }
