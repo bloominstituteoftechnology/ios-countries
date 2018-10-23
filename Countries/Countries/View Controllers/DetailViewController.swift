@@ -9,22 +9,44 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    func updateViews(){
+        guard isViewLoaded, let country = country else {return}
+        
+        self.title = country.name
+        
+        nameLabel.text = country.name
+        regionLabel.text = country.region
+        capitalLabel.text = country.capital
+        populationLabel.text = String(country.population)
+        currencyLabel.text = country.currencies.compactMap{
+            guard let name = $0.name,
+                let symbol = $0.symbol else {return ""}
+            return "\(name) (\(symbol)) "
+            }.joined(separator: ",")
+        languageLabel.text = country.languages.compactMap{
+            guard let name = $0.name,
+                let nativeName = $0.nativeName else {return ""}
+            return "\(name) (\(nativeName)) "
+        }.joined(separator: ", ")
+        
+        let alpha3code = country.alpha3Code.lowercased()
+        imageView?.image = UIImage(named: alpha3code)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - Properties
+    var country: Country?{
+        didSet{
+            updateViews()
+        }
     }
-    */
-
+    
+    //IBOutlets
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var regionLabel: UILabel!
+    @IBOutlet weak var capitalLabel: UILabel!
+    @IBOutlet weak var populationLabel: UILabel!
+    @IBOutlet weak var currencyLabel: UILabel!
+    @IBOutlet weak var languageLabel: UILabel!
 }
