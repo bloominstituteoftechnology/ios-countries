@@ -38,6 +38,7 @@ class SearchTableTableViewController: UITableViewController,UISearchBarDelegate 
                 NSLog("Fetch results is nil")
                 return
             }
+            guard !results.isEmpty else {return}
             self.countries = results
         }
     }
