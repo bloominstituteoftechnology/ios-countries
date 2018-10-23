@@ -60,7 +60,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="l9G-iT-Eca" kind="showDetail" id="CH7-cx-0SL"/>
+                                    <segue destination="l9G-iT-Eca" kind="showDetail" identifier="ShowDetailSegue" id="CH7-cx-0SL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
