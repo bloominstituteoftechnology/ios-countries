@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+private let baseURL = URL(string: "")!
+
+class CountryController
+{
+    
+}

@@ -17,8 +17,10 @@ class CountryDetailViewController: UIViewController
     @IBOutlet var populationLabel: UILabel!
     @IBOutlet var currencyLabel: UILabel!
     @IBOutlet var languageLabel: UILabel!
+    @IBOutlet var demonymLabel: UILabel!
     
-    
+    @IBOutlet var mapView: UIView!
+    @IBOutlet var imageView: UIImageView!
     
     override func viewDidLoad()
     {

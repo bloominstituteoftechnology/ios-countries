@@ -7,3 +7,31 @@
 //
 
 import Foundation
+
+struct Country: Codable, Equatable
+{
+    let name: String
+    let region: String
+    let capital: String?
+    let population: Int
+
+    let flagString: String 
+    let alpha3Code: String
+    let location: [Double]
+    
+    let demonyms: [String]
+    let currencies: [Currency]
+    let languages: [Language]
+    
+    struct Currency: Codable, Equatable
+    {
+        let name: String
+    }
+    
+    struct Language: Codable, Equatable
+    {
+        let name: String
+    }
+    
+    
+}
