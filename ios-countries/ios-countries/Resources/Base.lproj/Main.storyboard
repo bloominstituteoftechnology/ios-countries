@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="1106" y="260"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Country Search Table View Controller-->
         <scene sceneID="vvr-d5-W0o">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="PF9-O2-dlf" customClass="CountrySearchTableViewController" customModule="ios_countries" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,7 +69,7 @@
                             <outlet property="delegate" destination="PF9-O2-dlf" id="FG7-mu-5QQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="C1Z-s5-qen"/>
+                    <navigationItem key="navigationItem" id="C1Z-s5-qen"/>
                     <connections>
                         <outlet property="searchBar" destination="pGm-pr-UIT" id="bTI-GR-gWg"/>
                     </connections>

@@ -19,6 +19,9 @@ class CountryDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+        navigationItem.leftItemsSupplementBackButton = true
+        updateViews()
     }
     
     // MARK: - Private
