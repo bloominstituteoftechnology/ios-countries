@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MapKit
 
-class CountryDetailViewController: UIViewController {
+class CountryDetailViewController: UIViewController, MKMapViewDelegate {
     
     // MARK: - Properties
     
@@ -26,6 +27,10 @@ class CountryDetailViewController: UIViewController {
     @IBOutlet weak var populationLabel: UILabel!
     @IBOutlet weak var currenciesLabel: UILabel!
     @IBOutlet weak var languagesLabel: UILabel!
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
+    // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,5 +51,9 @@ class CountryDetailViewController: UIViewController {
         languagesLabel.text = "Languages: \(country.languages.joined(separator: ", "))"
         
         imageView.image = UIImage(named: "\(country.alpha3Code)")
+        
+        mapView.region = MKCoordinateRegion(center: country.coordinate, span: MKCoordinateSpan(latitudeDelta: 10.0, longitudeDelta: 10.0))
+        
+        // span is the angle of how much the region takes up?
     }
 }

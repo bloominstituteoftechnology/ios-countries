@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import CoreLocation
 
-struct Country: Codable {
+struct Country: Decodable {
     
     var name: String
     var region: String
@@ -17,7 +18,7 @@ struct Country: Codable {
     var currencies: [String]
     var languages: [String]
     var alpha3Code: String  // abbrev. of country, use to match with the flag name
-//    var flag: String
+    var coordinate: CLLocationCoordinate2D = kCLLocationCoordinate2DInvalid
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -27,6 +28,7 @@ struct Country: Codable {
         case currencies
         case languages
         case alpha3Code
+        case latlng
         
         enum CurrenciesCodingKeys: String, CodingKey {
             case name
@@ -46,6 +48,11 @@ struct Country: Codable {
         self.capital = try container.decode(String.self, forKey: .capital)
         self.population = try container.decode(Int.self, forKey: .population)
         self.alpha3Code = try container.decode(String.self, forKey: .alpha3Code).lowercased()
+        
+        let latlng = try container.decode([Double].self, forKey: .latlng)
+        if latlng.count == 2 {  // make sure there are two Doubles in the array
+            self.coordinate = CLLocationCoordinate2D(latitude: latlng[0], longitude: latlng[1])
+        }
         
         // currencies array
         var currenciesContainer = try container.nestedUnkeyedContainer(forKey: .currencies)
