@@ -15,11 +15,11 @@ struct Country: Codable, Equatable
     let capital: String?
     let population: Int
 
-    let flagString: String 
+    //let flagImageString: String
     let alpha3Code: String
-    let location: [Double]
+    let latlng: [Double]
     
-    let demonyms: [String]
+    //let demonym: [String]
     let currencies: [Currency]
     let languages: [Language]
     

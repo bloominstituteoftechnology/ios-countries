@@ -22,6 +22,18 @@ class CountryDetailViewController: UIViewController
     @IBOutlet var mapView: UIView!
     @IBOutlet var imageView: UIImageView!
     
+    var countryController: CountryController?
+    var country: Country?
+    {
+        didSet
+        {
+            DispatchQueue.main.async {
+                self.updateViews()
+            }
+        }
+    }
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -31,6 +43,18 @@ class CountryDetailViewController: UIViewController
 
     private func updateViews()
     {
+        guard let country = country else {return}
+        
+        title = country.name
+        nameLabel.text = country.name
+        regionLabel.text = country.region
+        capitalLabel.text = country.capital
+        populationLabel.text = String(country.population)
+        //currencyLabel.text = country.currencies.map({$0.currency.name}).joined(separator: ", ")
+        //languageLabel.text = country.languages.map({$0.language.name}).joined(separator: ", ")
+        
+        let imageName = country.alpha3Code.lowercased()
+        imageView.image = UIImage(named: imageName)
         
     }
 

@@ -8,7 +8,7 @@
 
 import Foundation
 
-private let baseURL = URL(string: "https://restcountries.eu/rest/v2/")!
+private let baseURL = URL(string: "https://restcountries.eu/rest/v2/all")!
 
 class CountryController
 {
@@ -51,7 +51,41 @@ class CountryController
         }
         dataTask.resume() 
     }
+    
+    func fetchCountries(completion: @escaping (Error?) -> Void)
+    {
+        URLSession.shared.dataTask(with: baseURL) { (data, _, error) in
+            if let error = error {
+                completion(error)
+                return
+            }
+            guard let data = data else {
+                completion(NSError())
+                return
+            }
+            
+            do {
+                let countries = try JSONDecoder().decode([Country].self, from: data)
+                self.countries = countries 
+                completion(nil)
+                
+                print(countries)
+            }
+            catch
+            {
+                completion(error)
+                return
+            }
+        }.resume()
+    }
+    
+    
+    
+    
+    
+    
 }
+
 
 
 
