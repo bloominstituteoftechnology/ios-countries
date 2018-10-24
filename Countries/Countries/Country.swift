@@ -19,18 +19,23 @@ struct Country: Codable, Equatable
     let alpha3Code: String
     let latlng: [Double]
     
-    //let demonym: [String]
+    let demonym: String
     let currencies: [Currency]
     let languages: [Language]
     
     struct Currency: Codable, Equatable
     {
-        let name: String
+        //let code: String?
+        let name: String?
+        //let symbol: String?
     }
     
     struct Language: Codable, Equatable
     {
+        //let iso639_1: String?
+        //let iso639_2: String
         let name: String
+        //let nativeName: String
     }
     
     

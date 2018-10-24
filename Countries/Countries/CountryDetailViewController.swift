@@ -50,9 +50,10 @@ class CountryDetailViewController: UIViewController
         regionLabel.text = country.region
         capitalLabel.text = country.capital
         populationLabel.text = String(country.population)
-        //currencyLabel.text = country.currencies.map({$0.currency.name}).joined(separator: ", ")
-        //languageLabel.text = country.languages.map({$0.language.name}).joined(separator: ", ")
         
+        currencyLabel.text = "\(country.currencies)"
+        languageLabel.text = "\(country.languages)"
+        demonymLabel.text = country.demonym
         let imageName = country.alpha3Code.lowercased()
         imageView.image = UIImage(named: imageName)
         
