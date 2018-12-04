@@ -13,6 +13,8 @@
 		D859EB4E21B71C4A005E327F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D859EB4C21B71C4A005E327F /* Main.storyboard */; };
 		D859EB5021B71C4B005E327F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D859EB4F21B71C4B005E327F /* Assets.xcassets */; };
 		D859EB5321B71C4C005E327F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D859EB5121B71C4B005E327F /* LaunchScreen.storyboard */; };
+		D859EB5B21B7300A005E327F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = D859EB5A21B7300A005E327F /* Country.swift */; };
+		D859EB5D21B733F1005E327F /* CountryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D859EB5C21B733F1005E327F /* CountryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D859EB4F21B71C4B005E327F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D859EB5221B71C4B005E327F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D859EB5421B71C4C005E327F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D859EB5A21B7300A005E327F /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		D859EB5C21B733F1005E327F /* CountryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				D859EB4821B71C4A005E327F /* MasterViewController.swift */,
 				D859EB4A21B71C4A005E327F /* DetailViewController.swift */,
 				D859EB4C21B71C4A005E327F /* Main.storyboard */,
+				D859EB5A21B7300A005E327F /* Country.swift */,
+				D859EB5C21B733F1005E327F /* CountryController.swift */,
 				D859EB4F21B71C4B005E327F /* Assets.xcassets */,
 				D859EB5121B71C4B005E327F /* LaunchScreen.storyboard */,
 				D859EB5421B71C4C005E327F /* Info.plist */,
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D859EB5B21B7300A005E327F /* Country.swift in Sources */,
 				D859EB4B21B71C4A005E327F /* DetailViewController.swift in Sources */,
+				D859EB5D21B733F1005E327F /* CountryController.swift in Sources */,
 				D859EB4921B71C4A005E327F /* MasterViewController.swift in Sources */,
 				D859EB4721B71C4A005E327F /* AppDelegate.swift in Sources */,
 			);
