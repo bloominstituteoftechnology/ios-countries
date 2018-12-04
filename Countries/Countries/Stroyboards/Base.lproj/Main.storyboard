@@ -54,6 +54,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Sit-ni-N7m"/>
+                    <connections>
+                        <outlet property="countrySearchBar" destination="DlD-sd-yaZ" id="AZx-ZS-arA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HDK-jZ-WgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

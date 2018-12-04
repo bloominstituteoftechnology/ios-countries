@@ -8,10 +8,14 @@
 
 import UIKit
 
-class CountriesTableViewController: UITableViewController {
+class CountriesTableViewController: UITableViewController, UISearchBarDelegate {
+    
+    @IBOutlet weak var countrySearchBar: UISearchBar!
+    let countryController = CountryController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        countrySearchBar.delegate = self
     }
 
     // MARK: - Table view data source
@@ -24,6 +28,15 @@ class CountriesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath)
         
         return cell
+    }
+    
+    // MARK: - UISearchBarDelegate
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchTerm = searchBar.text, !searchTerm.isEmpty else { return }
+        
+        
+        
     }
     
     // MARK: - Navigation
