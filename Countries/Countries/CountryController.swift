@@ -13,8 +13,8 @@ class CountryController {
     
     static let shared = CountryController()
     
-    func getCountries(completion: @escaping ([Country]?, Error?) -> Void) {
-        let allCountriesUrl = baseUrl.appendingPathComponent("all")
+    func getCountries(with name: String, completion: @escaping ([Country]?, Error?) -> Void) {
+        let allCountriesUrl = baseUrl.appendingPathComponent("name").appendingPathComponent(name)
         let request = URLRequest(url: allCountriesUrl)
         
         URLSession.shared.dataTask(with: request) { (data, _, error) in
@@ -51,6 +51,7 @@ class CountryController {
                     let country = Country(name: name, region: region, capital: capital, population: population, currencies: currencies, languages: languages, flag: flag )
                     self.countries.append(country)
                 }
+                print(self.countries)
                 completion(self.countries, nil)
             }
             catch {
