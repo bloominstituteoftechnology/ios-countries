@@ -15,6 +15,7 @@
 		A1DB630821B75B7200901342 /* CountriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB630721B75B7200901342 /* CountriesTableViewController.swift */; };
 		A1DB630A21B7604800901342 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB630921B7604800901342 /* Country.swift */; };
 		A1DB630C21B761F800901342 /* CountryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB630B21B761F800901342 /* CountryController.swift */; };
+		A1DB630E21B77D9800901342 /* SplitViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB630D21B77D9800901342 /* SplitViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A1DB630721B75B7200901342 /* CountriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesTableViewController.swift; sourceTree = "<group>"; };
 		A1DB630921B7604800901342 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		A1DB630B21B761F800901342 /* CountryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryController.swift; sourceTree = "<group>"; };
+		A1DB630D21B77D9800901342 /* SplitViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				A1DB62F721B751F000901342 /* Main.storyboard */,
 				A1DB630921B7604800901342 /* Country.swift */,
 				A1DB630B21B761F800901342 /* CountryController.swift */,
+				A1DB630D21B77D9800901342 /* SplitViewControllerDelegate.swift */,
 				A1DB630521B75B6100901342 /* CountriesDetailViewController.swift */,
 				A1DB630721B75B7200901342 /* CountriesTableViewController.swift */,
 				A1DB62FA21B751F100901342 /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1DB630E21B77D9800901342 /* SplitViewControllerDelegate.swift in Sources */,
 				A1DB630A21B7604800901342 /* Country.swift in Sources */,
 				A1DB630621B75B6100901342 /* CountriesDetailViewController.swift in Sources */,
 				A1DB630C21B761F800901342 /* CountryController.swift in Sources */,
