@@ -11,6 +11,10 @@
 		A1DB62F921B751F000901342 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1DB62F721B751F000901342 /* Main.storyboard */; };
 		A1DB62FB21B751F100901342 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1DB62FA21B751F100901342 /* Assets.xcassets */; };
 		A1DB62FE21B751F100901342 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1DB62FC21B751F100901342 /* LaunchScreen.storyboard */; };
+		A1DB630621B75B6100901342 /* CountriesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB630521B75B6100901342 /* CountriesDetailViewController.swift */; };
+		A1DB630821B75B7200901342 /* CountriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB630721B75B7200901342 /* CountriesTableViewController.swift */; };
+		A1DB630A21B7604800901342 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB630921B7604800901342 /* Country.swift */; };
+		A1DB630C21B761F800901342 /* CountryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB630B21B761F800901342 /* CountryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		A1DB62FA21B751F100901342 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1DB62FD21B751F100901342 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1DB62FF21B751F100901342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1DB630521B75B6100901342 /* CountriesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesDetailViewController.swift; sourceTree = "<group>"; };
+		A1DB630721B75B7200901342 /* CountriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesTableViewController.swift; sourceTree = "<group>"; };
+		A1DB630921B7604800901342 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		A1DB630B21B761F800901342 /* CountryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,10 @@
 			children = (
 				A1DB62F321B751F000901342 /* AppDelegate.swift */,
 				A1DB62F721B751F000901342 /* Main.storyboard */,
+				A1DB630921B7604800901342 /* Country.swift */,
+				A1DB630B21B761F800901342 /* CountryController.swift */,
+				A1DB630521B75B6100901342 /* CountriesDetailViewController.swift */,
+				A1DB630721B75B7200901342 /* CountriesTableViewController.swift */,
 				A1DB62FA21B751F100901342 /* Assets.xcassets */,
 				A1DB62FC21B751F100901342 /* LaunchScreen.storyboard */,
 				A1DB62FF21B751F100901342 /* Info.plist */,
@@ -132,6 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1DB630A21B7604800901342 /* Country.swift in Sources */,
+				A1DB630621B75B6100901342 /* CountriesDetailViewController.swift in Sources */,
+				A1DB630C21B761F800901342 /* CountryController.swift in Sources */,
+				A1DB630821B75B7200901342 /* CountriesTableViewController.swift in Sources */,
 				A1DB62F421B751F000901342 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
