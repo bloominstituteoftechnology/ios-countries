@@ -36,6 +36,8 @@ class CountriesTableViewController: UITableViewController, UISearchBarDelegate {
     // MARK: - UISearchBarDelegate
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
+        
         guard let searchTerm = searchBar.text, !searchTerm.isEmpty else { return }
         
         countryController.searchForCountry(searchTerm: searchTerm) { (error) in
@@ -44,8 +46,10 @@ class CountriesTableViewController: UITableViewController, UISearchBarDelegate {
                 return
             }
         }
-        self.tableView.reloadData()
-        self.view.endEditing(true)
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     // MARK: - Navigation

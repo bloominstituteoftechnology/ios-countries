@@ -35,10 +35,7 @@ class CountryController {
             do {
                 let jsonDecoder = JSONDecoder()
                 let countries = try jsonDecoder.decode([Country].self, from: data)
-                
-                DispatchQueue.main.async {
-                    self.countries = countries
-                }
+                self.countries = countries
             } catch {
                 NSLog("Error decoding data; \(error)")
                 completion(error)

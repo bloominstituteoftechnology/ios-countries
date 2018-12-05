@@ -17,7 +17,7 @@ struct Country: Decodable {
     let population: Int
     let currencies: [String]
     let languages: [String]
-    let flag: UIImage
+    let flagName: String
 //    let location: CLLocationCoordinate2D
     
     init(name: String, subregion: String, capital:String, population: Int, currencies: [String], languages: [String], alpha3Code: String, latlng: (CLLocationDegrees, CLLocationDegrees) = (0, 0)) {
@@ -27,7 +27,7 @@ struct Country: Decodable {
         self.population = population
         self.currencies = currencies
         self.languages = languages
-        self.flag = UIImage(named: alpha3Code)!
+        self.flagName = alpha3Code
 //        self.location = CLLocationCoordinate2D(latitude: latlng.0, longitude: latlng.1)
     }
     
@@ -94,7 +94,7 @@ struct Country: Decodable {
         self.population = population
         self.currencies = currenciesArray
         self.languages = languagesArray
-        self.flag = UIImage(named: alpha3Code.lowercased())!
+        self.flagName = alpha3Code.lowercased()
 //        self.location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 }
