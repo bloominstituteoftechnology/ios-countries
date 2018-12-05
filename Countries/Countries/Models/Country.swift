@@ -18,7 +18,7 @@ struct Country: Decodable {
     let currencies: [String]
     let languages: [String]
     let flag: UIImage
-    let location: CLLocationCoordinate2D
+//    let location: CLLocationCoordinate2D
     
     init(name: String, subregion: String, capital:String, population: Int, currencies: [String], languages: [String], alpha3Code: String, latlng: (CLLocationDegrees, CLLocationDegrees) = (0, 0)) {
         self.name = name
@@ -28,7 +28,7 @@ struct Country: Decodable {
         self.currencies = currencies
         self.languages = languages
         self.flag = UIImage(named: alpha3Code)!
-        self.location = CLLocationCoordinate2D(latitude: latlng.0, longitude: latlng.1)
+//        self.location = CLLocationCoordinate2D(latitude: latlng.0, longitude: latlng.1)
     }
     
     enum CountryCodingKeys: String, CodingKey {
@@ -83,9 +83,9 @@ struct Country: Decodable {
         let alpha3Code = try dictionaryContainer.decode(String.self, forKey: .alpha3Code)
         
         // Latitude - longitude
-        var latlngContainer = try dictionaryContainer.nestedUnkeyedContainer(forKey: .latlng)
-        let latitude = try latlngContainer.decode(CLLocationDegrees.self)
-        let longitude = try latlngContainer.decode(CLLocationDegrees.self)
+//        var latlngContainer = try dictionaryContainer.nestedUnkeyedContainer(forKey: .latlng)
+//        let latitude = try latlngContainer.decode(CLLocationDegrees.self)
+//        let longitude = try latlngContainer.decode(CLLocationDegrees.self)
         
         
         self.name = name
@@ -94,7 +94,7 @@ struct Country: Decodable {
         self.population = population
         self.currencies = currenciesArray
         self.languages = languagesArray
-        self.flag = UIImage(named: alpha3Code)!
-        self.location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        self.flag = UIImage(named: alpha3Code.lowercased())!
+//        self.location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
 }

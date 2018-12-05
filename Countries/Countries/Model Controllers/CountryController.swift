@@ -13,7 +13,7 @@ class CountryController {
     var countries = [Country]()
     private let baseURL = URL(string: "https://restcountries.eu/rest/v2/name")!
     
-    func searchForCountry(searchTerm: String, completion: @escaping ([Country]?, Error?) -> Void ) {
+    func searchForCountry(searchTerm: String, completion: @escaping (Error?) -> Void ) {
         
         let url = baseURL.appendingPathComponent(searchTerm)
         var request = URLRequest(url: url)
@@ -22,13 +22,13 @@ class CountryController {
         URLSession.shared.dataTask(with: request) { (data, _, error) in
             if let error = error {
                 NSLog("Error fetching country: \(error)")
-                completion(nil, error)
+                completion(error)
                 return
             }
             
             guard let data = data else {
                 NSLog("No data returned")
-                completion(nil, error)
+                completion(error)
                 return
             }
             
@@ -41,7 +41,7 @@ class CountryController {
                 }
             } catch {
                 NSLog("Error decoding data; \(error)")
-                completion(nil, error)
+                completion(error)
                 return
             }
         }.resume()
