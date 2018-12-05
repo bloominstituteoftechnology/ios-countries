@@ -37,20 +37,21 @@ class CountriesTableViewController: UITableViewController, UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.view.endEditing(true)
-        
+
         guard let searchTerm = searchBar.text, !searchTerm.isEmpty else { return }
-        
-        countryController.searchForCountry(searchTerm: searchTerm) { (error) in
+
+        countryController.searchForCountry(searchTerm: searchTerm) { error  in
             if let error = error {
                 NSLog("Error searching for country: \(error)")
                 return
             }
         }
-        
+
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
     }
+
     
     // MARK: - Navigation
 
