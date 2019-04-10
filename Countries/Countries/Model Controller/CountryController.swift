@@ -10,7 +10,7 @@ import UIKit
 
 class CountryController {
     
-    func fetchCountires(completion: @escaping ([Country]?, Error?) -> Void) {
+    func fetchCountires(countryName: String, completion: @escaping (Error?) -> Void) {
         
         
         
