@@ -8,10 +8,28 @@
 
 import UIKit
 
-class CountriesTableViewController: UITableViewController {
+class CountriesTableViewController: UITableViewController, UISearchBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        guard let searchTerm = searchBar.text else { return }
+        
+        countryController.fetchCountries(countryName: searchTerm) { (error) in
+            
+            if let error = error {
+                NSLog("Error found fetching country array: \(error)")
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 
     // MARK: - Table view data source
@@ -50,5 +68,8 @@ class CountriesTableViewController: UITableViewController {
     // MARK: - Properties
     
     let countryController = CountryController()
+    
+    @IBOutlet var searchBar: UISearchBar!
+    
 
 }

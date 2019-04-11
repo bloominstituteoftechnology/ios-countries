@@ -11,16 +11,26 @@ import UIKit
 struct Country: Codable {
     
     let name: String
-    let region: String
-    let Capital: String
+    let region: String?
+    let capital: String?
     let population: Int
-    let currencies: [Currency]
+    let currencies: [Currency?]
     let languages: [Language]
-    let flag: URL
+    let flagCode: String
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case region
+        case capital
+        case population
+        case currencies
+        case languages
+        case flagCode = "alpha3Code"
+    }
     
     struct Currency: Codable {
-        let name: String
-        let symbol: String
+        let name: String?
+        let symbol: String?
     }
     
     struct Language: Codable {
