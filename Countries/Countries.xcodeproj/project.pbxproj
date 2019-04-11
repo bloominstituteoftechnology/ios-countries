@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		391F8FDF225EFDE000019C7F /* SplitViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391F8FDE225EFDE000019C7F /* SplitViewControllerDelegate.swift */; };
 		392932C0225DAC5200B97A13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392932BF225DAC5200B97A13 /* AppDelegate.swift */; };
 		392932C5225DAC5200B97A13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 392932C3225DAC5200B97A13 /* Main.storyboard */; };
 		392932C7225DAC5200B97A13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 392932C6225DAC5200B97A13 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		391F8FDE225EFDE000019C7F /* SplitViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewControllerDelegate.swift; sourceTree = "<group>"; };
 		392932BC225DAC5200B97A13 /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		392932BF225DAC5200B97A13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		392932C4225DAC5200B97A13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		392932D6225DB0B500B97A13 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				391F8FDE225EFDE000019C7F /* SplitViewControllerDelegate.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				391F8FDF225EFDE000019C7F /* SplitViewControllerDelegate.swift in Sources */,
 				392932D8225DB0D800B97A13 /* Country.swift in Sources */,
 				392932DA225DB3AD00B97A13 /* CountriesTableViewController.swift in Sources */,
 				392932E0225DB46B00B97A13 /* CountryController.swift in Sources */,

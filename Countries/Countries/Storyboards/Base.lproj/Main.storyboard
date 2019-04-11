@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Country Name-->
+        <!--Country Detail View Controller-->
         <scene sceneID="zGD-rz-p0n">
             <objects>
                 <viewController id="dmn-VO-pJM" customClass="CountryDetailViewController" customModule="Countries" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,49 +20,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VuG-dP-8pV">
-                                <rect key="frame" x="20" y="160" width="335" height="415"/>
+                                <rect key="frame" x="20" y="159.99999999999997" width="335" height="483.33333333333326"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="abw" translatesAutoresizingMaskIntoConstraints="NO" id="vmR-5r-Iva">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vmR-5r-Iva">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="223.33333333333334"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="vmR-5r-Iva" secondAttribute="height" multiplier="1.5/1" id="u9d-s2-52S"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ch0-5a-nb5">
-                                        <rect key="frame" x="0.0" y="243.33333333333331" width="335" height="171.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="243.33333333333331" width="335" height="240"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2t6-QB-JPO">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2t6-QB-JPO">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8d-WO-lGf">
-                                                <rect key="frame" x="0.0" y="38" width="335" height="20.333333333333329"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8d-WO-lGf">
+                                                <rect key="frame" x="0.0" y="58" width="335" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJJ-Yr-TEQ">
-                                                <rect key="frame" x="0.0" y="66.333333333333371" width="335" height="20.333333333333329"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJJ-Yr-TEQ">
+                                                <rect key="frame" x="0.0" y="116.00000000000006" width="335" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population Int" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ET8-A0-GWZ">
-                                                <rect key="frame" x="0.0" y="94.666666666666686" width="335" height="20.333333333333329"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ET8-A0-GWZ">
+                                                <rect key="frame" x="0.0" y="174.00000000000006" width="335" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currencies" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYq-9W-5mE">
-                                                <rect key="frame" x="0.0" y="123.00000000000004" width="335" height="20.333333333333329"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYq-9W-5mE">
+                                                <rect key="frame" x="0.0" y="232.00000000000006" width="335" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Languages" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezL-4m-52t">
-                                                <rect key="frame" x="0.0" y="151.33333333333331" width="335" height="20.333333333333343"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezL-4m-52t">
+                                                <rect key="frame" x="0.0" y="240.00000000000006" width="335" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -84,7 +84,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cmc-T5-Rqi"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Country Name" id="9x6-5u-caU"/>
+                    <navigationItem key="navigationItem" id="9x6-5u-caU"/>
                     <connections>
                         <outlet property="capitalLabel" destination="tJJ-Yr-TEQ" id="tmM-AE-w35"/>
                         <outlet property="currencyLabel" destination="fYq-9W-5mE" id="DqK-9P-wP8"/>
@@ -208,9 +208,6 @@
             <point key="canvasLocation" x="400.00000000000006" y="259.82142857142856"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="abw" width="900" height="600"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8cn-Sb-xZ5"/>
     </inferredMetricsTieBreakers>

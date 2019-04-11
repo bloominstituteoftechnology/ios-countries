@@ -15,11 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        configureSplitViewController()
+        
         return true
     }
 
+    func configureSplitViewController() {
+        
+        // Referance to the split view controller on the screen, not a new instance of it.
+        let splitViewController = window?.rootViewController as! UISplitViewController
+        
+        splitViewController.delegate = splitViewControllerDelegate
+    }
     
+    let splitViewControllerDelegate = SplitViewControllerDelegate()
 
 }
 
