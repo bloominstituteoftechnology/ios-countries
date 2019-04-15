@@ -45,7 +45,13 @@ class CountriesTableViewController: UITableViewController, UISearchBarDelegate {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "ShowDetail" {
+            guard let detailVC = segue.destination as? CountryDetailViewController,
+            let index = tableView.indexPathForSelectedRow else { return }
+            
+            let country = countryController.countries[index.row]
+            detailVC.country = country
+        }
     }
     
     @IBOutlet weak var searchBar: UISearchBar!

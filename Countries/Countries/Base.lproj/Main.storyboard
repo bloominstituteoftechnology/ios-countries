@@ -40,6 +40,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="KcA-7T-oyT" kind="show" identifier="ShowDetail" id="aZC-5I-vCA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -56,22 +59,84 @@
             </objects>
             <point key="canvasLocation" x="3102.898550724638" y="167.41071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Country Detail View Controller-->
         <scene sceneID="SuL-Zn-DXK">
             <objects>
-                <viewController id="KcA-7T-oyT" sceneMemberID="viewController">
+                <viewController id="KcA-7T-oyT" customClass="CountryDetailViewController" customModule="Countries" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oGZ-ek-pAD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MDl-43-xLE">
-                                <rect key="frame" x="69" y="98" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8nm-Hr-IYI">
+                                <rect key="frame" x="16" y="104" width="382" height="456"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ata" translatesAutoresizingMaskIntoConstraints="NO" id="MDl-43-xLE">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="262.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="MDl-43-xLE" secondAttribute="height" multiplier="16:11" id="5u9-3g-PWI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YLR-JE-AkE">
+                                        <rect key="frame" x="0.0" y="270.5" width="382" height="185.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57r-Vh-54e">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="36"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rau-qf-ynI">
+                                                <rect key="frame" x="0.0" y="44" width="382" height="24"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Population" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6O-be-vmF">
+                                                <rect key="frame" x="0.0" y="76" width="382" height="24"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6l9-59-65l">
+                                                <rect key="frame" x="0.0" y="108" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currencies" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNp-1h-Cua">
+                                                <rect key="frame" x="0.0" y="136.5" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Languages" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdM-b5-aHY">
+                                                <rect key="frame" x="0.0" y="165" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8nm-Hr-IYI" firstAttribute="top" secondItem="ejz-zT-dR6" secondAttribute="top" constant="16" id="HlV-9T-tGU"/>
+                            <constraint firstItem="ejz-zT-dR6" firstAttribute="trailing" secondItem="8nm-Hr-IYI" secondAttribute="trailing" constant="16" id="LtC-V4-WUZ"/>
+                            <constraint firstItem="8nm-Hr-IYI" firstAttribute="leading" secondItem="ejz-zT-dR6" secondAttribute="leading" constant="16" id="qlp-SV-NXM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ejz-zT-dR6"/>
                     </view>
+                    <connections>
+                        <outlet property="countryCapitalLabel" destination="rau-qf-ynI" id="1fu-1r-iKe"/>
+                        <outlet property="countryCurrenciesLabel" destination="cNp-1h-Cua" id="cZZ-zU-883"/>
+                        <outlet property="countryImageView" destination="MDl-43-xLE" id="wxT-OK-bCW"/>
+                        <outlet property="countryLanguagesLabel" destination="vdM-b5-aHY" id="IR9-Rk-7ue"/>
+                        <outlet property="countryNameLabel" destination="57r-Vh-54e" id="cT8-T9-3kI"/>
+                        <outlet property="countryPopulationLabel" destination="p6O-be-vmF" id="OwP-Q7-UZe"/>
+                        <outlet property="countryRegionLabel" destination="6l9-59-65l" id="Thw-52-ydp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxJ-xh-7CR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,4 +161,7 @@
             <point key="canvasLocation" x="2192.753623188406" y="167.41071428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ata" width="744" height="496"/>
+    </resources>
 </document>

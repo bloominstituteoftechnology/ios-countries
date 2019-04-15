@@ -15,7 +15,7 @@ struct Country: Codable {
     let population: Int
     let currencies: [Currency]
     let languages: [Language]
-    let flag: URL?
+    let flag: String
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -24,7 +24,7 @@ struct Country: Codable {
         case population
         case currencies
         case languages
-        case flag
+        case flag = "alpha3Code"
     }
     
     init(from decoder: Decoder) throws {
@@ -38,8 +38,8 @@ struct Country: Codable {
         let currencies = try container.decode([Currency].self, forKey: .currencies)
         let languages = try container.decode([Language].self, forKey: .languages)
         
-        let flagURLString = try container.decode(String.self, forKey: .flag)
-        let flagURL = URL(string: flagURLString) ?? nil
+        let flagUppercase = try container.decode(String.self, forKey: .flag)
+        let flag = flagUppercase.lowercased()
         
         self.name = name
         self.region = region
@@ -47,7 +47,7 @@ struct Country: Codable {
         self.population = population
         self.currencies = currencies
         self.languages = languages
-        self.flag = flagURL
+        self.flag = flag
     }
 }
 
