@@ -19,7 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-
+    func configureSplitViewControllerDelegate() {
+        let splitViewController = window?.rootViewController as! UISplitViewController
+        splitViewController.delegate = splitViewControllerDelegate
+        
+    }
+    
+    let splitViewControllerDelegate = SplitViewControllerDelegate()
 
 }
 
