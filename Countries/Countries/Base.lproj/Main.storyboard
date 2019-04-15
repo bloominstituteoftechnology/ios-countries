@@ -24,7 +24,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAM-lB-k2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1288.4057971014495" y="-113.16964285714285"/>
+            <point key="canvasLocation" x="1300" y="27"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="L18-mJ-zeM">
@@ -47,6 +47,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="5Kw-PP-veq" kind="showDetail" id="pza-Sc-2FD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -105,7 +108,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k7P-Q7-G3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="378.26086956521743" y="-113.16964285714285"/>
+            <point key="canvasLocation" x="378" y="27"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="SqL-Y1-itt"/>
+    </inferredMetricsTieBreakers>
 </document>
