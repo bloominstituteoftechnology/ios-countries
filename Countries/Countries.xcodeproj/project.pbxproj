@@ -13,6 +13,7 @@
 		C46F4544226532DB00A06BDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46F4543226532DB00A06BDD /* Assets.xcassets */; };
 		C46F4547226532DB00A06BDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46F4545226532DB00A06BDD /* LaunchScreen.storyboard */; };
 		C46F454F226535BD00A06BDD /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F454E226535BD00A06BDD /* Country.swift */; };
+		C46F4551226540D700A06BDD /* SplitViewControlllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F4550226540D700A06BDD /* SplitViewControlllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C46F4546226532DB00A06BDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C46F4548226532DB00A06BDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C46F454E226535BD00A06BDD /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		C46F4550226540D700A06BDD /* SplitViewControlllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewControlllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				C46F453C226532DA00A06BDD /* AppDelegate.swift */,
 				C46F453E226532DA00A06BDD /* ViewController.swift */,
 				C46F4540226532DA00A06BDD /* Main.storyboard */,
+				C46F4550226540D700A06BDD /* SplitViewControlllerDelegate.swift */,
 				C46F4543226532DB00A06BDD /* Assets.xcassets */,
 				C46F4545226532DB00A06BDD /* LaunchScreen.storyboard */,
 				C46F4548226532DB00A06BDD /* Info.plist */,
@@ -141,6 +144,7 @@
 				C46F453F226532DA00A06BDD /* ViewController.swift in Sources */,
 				C46F454F226535BD00A06BDD /* Country.swift in Sources */,
 				C46F453D226532DA00A06BDD /* AppDelegate.swift in Sources */,
+				C46F4551226540D700A06BDD /* SplitViewControlllerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
