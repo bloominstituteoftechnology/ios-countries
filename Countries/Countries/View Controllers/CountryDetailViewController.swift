@@ -43,13 +43,13 @@ class CountryDetailViewController: UIViewController {
         nameLabel.text = country.name
         regionLabel.text = country.region
         capitalLabel.text = "Capital: \(country.capital ?? "N/A")"
-        populationLabel.text = "Population: \(country.population)"
+        populationLabel.text = Int(country.population)
         
-        let currenciesString = country.currencies.map({ $0.name ?? "N/A" }).joined(separator: ", ")
+        let currenciesString = country.currencies.map({ $0.name })
         currencyLabel.text = "Currencies: \(currenciesString)"
-        let languagesString = country.languages.map({ $0.name }).joined(separator: ", ")
+        let languagesString = country.languages.map({ $0.name })
         languageLabel.text = "Languages: \(languagesString)"
         
-        flagView.image = UIImage(named: country.flag.lowercased())
+        flagView.image = UIImage(named: country.flag)
     }
 }
