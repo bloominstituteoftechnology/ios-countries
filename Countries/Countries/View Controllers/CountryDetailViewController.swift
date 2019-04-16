@@ -11,23 +11,45 @@ import UIKit
 class CountryDetailViewController: UIViewController {
     
     //MARK: - Properties
-    var country: Country?
+    var country: Country? {
+        didSet{
+            updateViews()
+        }
+    }
+    
+    //MARK: - Outlets
+    @IBOutlet weak var flagView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var regionLabel: UILabel!
+    @IBOutlet weak var capitalLabel: UILabel!
+    @IBOutlet weak var populationLabel: UILabel!
+    @IBOutlet weak var currencyLabel: UILabel!
+    @IBOutlet weak var languageLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+        navigationItem.leftItemsSupplementBackButton = true
+        
+        updateViews()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func updateViews() {
+        guard let country = country, isViewLoaded else { return }
+        
+        title = country.name
+        nameLabel.text = country.name
+        regionLabel.text = country.region
+        capitalLabel.text = "Capital: \(country.capital ?? "N/A")"
+        populationLabel.text = "Population: \(country.population)"
+        
+        let currenciesString = country.currencies.map({ $0.name ?? "N/A" }).joined(separator: ", ")
+        currencyLabel.text = "Currencies: \(currenciesString)"
+        let languagesString = country.languages.map({ $0.name }).joined(separator: ", ")
+        languageLabel.text = "Languages: \(languagesString)"
+        
+        flagView.image = UIImage(named: country.flag.lowercased())
     }
-    */
-
 }

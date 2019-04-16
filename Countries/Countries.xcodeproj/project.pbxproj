@@ -15,6 +15,7 @@
 		489E76782265617F003FA2D6 /* CountryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489E76772265617F003FA2D6 /* CountryController.swift */; };
 		489E767A22656C26003FA2D6 /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489E767922656C26003FA2D6 /* CountryDetailViewController.swift */; };
 		489E767C22656C45003FA2D6 /* CountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489E767B22656C45003FA2D6 /* CountryTableViewController.swift */; };
+		489E767E226617CF003FA2D6 /* SplitViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489E767D226617CF003FA2D6 /* SplitViewControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		489E76772265617F003FA2D6 /* CountryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryController.swift; sourceTree = "<group>"; };
 		489E767922656C26003FA2D6 /* CountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
 		489E767B22656C45003FA2D6 /* CountryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewController.swift; sourceTree = "<group>"; };
+		489E767D226617CF003FA2D6 /* SplitViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				489E766022654022003FA2D6 /* AppDelegate.swift */,
+				489E767D226617CF003FA2D6 /* SplitViewControllerDelegate.swift */,
 				489E76742265460F003FA2D6 /* Model */,
 				489E7673226545C5003FA2D6 /* View Controllers */,
 				489E7672226545B4003FA2D6 /* Storyboards */,
@@ -168,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				489E767E226617CF003FA2D6 /* SplitViewControllerDelegate.swift in Sources */,
 				489E767C22656C45003FA2D6 /* CountryTableViewController.swift in Sources */,
 				489E76782265617F003FA2D6 /* CountryController.swift in Sources */,
 				489E767622654619003FA2D6 /* Country.swift in Sources */,
