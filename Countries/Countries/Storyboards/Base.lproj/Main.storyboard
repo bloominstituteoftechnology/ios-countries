@@ -90,7 +90,7 @@
             </objects>
             <point key="canvasLocation" x="903" y="149"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Countries-->
         <scene sceneID="Woz-Lu-4be">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="d6a-Cd-BW7" customClass="CountryTableViewController" customModule="Countries" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,7 +130,7 @@
                             <outlet property="delegate" destination="d6a-Cd-BW7" id="eV9-Ew-tGN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="7jk-3w-1IO"/>
+                    <navigationItem key="navigationItem" title="Countries" id="7jk-3w-1IO"/>
                     <connections>
                         <outlet property="searchBar" destination="VrD-hp-arr" id="XoE-ae-wHn"/>
                     </connections>
@@ -188,6 +188,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lCu-VX-ASI"/>
+        <segue reference="aIM-7a-6Wc"/>
     </inferredMetricsTieBreakers>
 </document>

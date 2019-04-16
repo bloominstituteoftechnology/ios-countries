@@ -60,14 +60,14 @@ class CountryTableViewController: UITableViewController, UISearchBarDelegate {
         
         if segue.identifier == "ShowDetail" {
             
-            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            guard let indexPath = tableView.indexPathForSelectedRow,
             
-            // the destination is now a navigation controller, not the ColorDetailVC
-            let navigationController = segue.destination as! UINavigationController
+            // the destination is now a navigation controller, not the CountryDetailViewController
+            let navigationController = segue.destination as? UINavigationController,
             
-            let destination = navigationController.topViewController as? CountryDetailViewController
+            let destination = navigationController.topViewController as? CountryDetailViewController else { return }
             
-            destination?.country = countryController.countries[indexPath.row]
+            destination.country = countryController.countries[indexPath.row]
         }
     }
 
