@@ -9,6 +9,9 @@
 import UIKit
 
 class CountryDetailViewController: UIViewController {
+    
+    //MARK: - Properties
+    var country: Country?
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -82,8 +82,8 @@
 		489E7673226545C5003FA2D6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				489E767922656C26003FA2D6 /* CountryDetailViewController.swift */,
 				489E767B22656C45003FA2D6 /* CountryTableViewController.swift */,
+				489E767922656C26003FA2D6 /* CountryDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

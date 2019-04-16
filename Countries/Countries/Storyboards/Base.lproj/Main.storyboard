@@ -80,6 +80,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="7jk-3w-1IO"/>
+                    <connections>
+                        <outlet property="searchBar" destination="VrD-hp-arr" id="XoE-ae-wHn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NpO-Zv-DwB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
