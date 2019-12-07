@@ -14,6 +14,7 @@
 		D6134495239C113B000E72CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6134493239C113B000E72CE /* Main.storyboard */; };
 		D6134497239C113C000E72CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6134496239C113C000E72CE /* Assets.xcassets */; };
 		D613449A239C113C000E72CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6134498239C113C000E72CE /* LaunchScreen.storyboard */; };
+		D61344A2239C1210000E72CE /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61344A1239C1210000E72CE /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D6134496239C113C000E72CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6134499239C113C000E72CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D613449B239C113C000E72CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D61344A1239C1210000E72CE /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				D613448B239C113B000E72CE /* AppDelegate.swift */,
 				D613448D239C113B000E72CE /* SceneDelegate.swift */,
+				D61344A1239C1210000E72CE /* Country.swift */,
 				D613448F239C113B000E72CE /* MasterViewController.swift */,
 				D6134491239C113B000E72CE /* DetailViewController.swift */,
 				D6134493239C113B000E72CE /* Main.storyboard */,
@@ -144,6 +147,7 @@
 				D613448C239C113B000E72CE /* AppDelegate.swift in Sources */,
 				D613448E239C113B000E72CE /* SceneDelegate.swift in Sources */,
 				D6134490239C113B000E72CE /* MasterViewController.swift in Sources */,
+				D61344A2239C1210000E72CE /* Country.swift in Sources */,
 				D6134492239C113B000E72CE /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
