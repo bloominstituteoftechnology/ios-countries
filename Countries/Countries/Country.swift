@@ -8,29 +8,21 @@
 
 import Foundation
 
-struct Country {
+struct Country: Codable {
     let name: String
     let region: String
-    let capitol: String
+    let capital: String
     let population: Int
     let currencies: [Currency]
     let languages: [Language]
-    let flag: Flag
+    let alpha3Code: String
 }
 
-struct Currency {
-    let code: String
+struct Currency: Codable {
     let name: String
     let symbol: String
 }
 
-struct Language {
-    let iso639_1: String
-    let iso639_2: String
+struct Language: Codable {
     let name: String
-    let nativeName: String
-}
-
-struct Flag {
-    let alpha3Code: String
 }
