@@ -1,5 +1,5 @@
 //
-//  Flag.swift
+//  Country.swift
 //  Countries
 //
 //  Created by Michael Flowers on 12/9/19.
@@ -8,8 +8,7 @@
 
 import Foundation
 
-
-struct Flag: Codable {
+struct Country: Codable {
     let name: String
     let capital: String
     let region: String
