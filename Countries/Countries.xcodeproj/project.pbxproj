@@ -15,6 +15,7 @@
 		1BD69882239F450A00A53101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BD69880239F450A00A53101 /* LaunchScreen.storyboard */; };
 		1BD69890239F478900A53101 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD6988F239F478900A53101 /* Network.swift */; };
 		1BD69893239F481500A53101 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD69892239F481500A53101 /* Country.swift */; };
+		1BD69895239F4FA900A53101 /* CountryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD69894239F4FA900A53101 /* CountryListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1BD69883239F450A00A53101 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BD6988F239F478900A53101 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1BD69892239F481500A53101 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		1BD69894239F4FA900A53101 /* CountryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				1BD69879239F450900A53101 /* ViewController.swift */,
+				1BD69894239F4FA900A53101 /* CountryListTableViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BD69895239F4FA900A53101 /* CountryListTableViewController.swift in Sources */,
 				1BD69890239F478900A53101 /* Network.swift in Sources */,
 				1BD6987A239F450900A53101 /* ViewController.swift in Sources */,
 				1BD69876239F450900A53101 /* AppDelegate.swift in Sources */,
