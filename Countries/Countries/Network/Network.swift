@@ -14,7 +14,7 @@ class Network {
 //    var countries: [Country] = []
      fileprivate let baseURL = URL(string: "https://restcountries.eu/rest/v2/name")!
     
-      func getCountryFrom(searchTerm: String, completion: @escaping (Country?, Error?) -> Void){
+      func getCountriesFrom(searchTerm: String, completion: @escaping ([Country]?, Error?) -> Void){
         //append the baseURL with the search term
         let url = baseURL.appendingPathComponent(searchTerm)
         
@@ -38,9 +38,9 @@ class Network {
             
             let jD = JSONDecoder()
             do {
-                let country =  try jD.decode(Country.self, from: data)
+                let countries =  try jD.decode([Country].self, from: data)
                 print("success getting country back in file: \(#file), in the body of the function: \(#function) on line: \(#line)\n")
-                completion(country, nil)
+                completion(countries, nil)
             } catch  {
                 print("Error in: \(#function)\n Readable Error: \(error.localizedDescription)\n Technical Error: \(error)")
                 completion(nil, error)
